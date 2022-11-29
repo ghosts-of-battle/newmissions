@@ -1,0 +1,29 @@
+// Description.ext for Olympus 3
+
+#include "script_component.hpp"
+#include "CfgEventHandlers.hpp"
+#include "CfgFunctions.hpp"
+#include "configs\CfgSimulator.hpp"
+#include "dialogs\defines.hpp"
+#include "dialogs\patientSpawnMenu.hpp"
+
+class CfgDebriefingSections {
+    #include "\z\ghostb\addons\adminmenu\debriefAdminLog.inc"
+    class acex_killTracker {
+        title = "ACEX Killed Events";
+        variable = "acex_killTracker_outputText";
+    };
+};
+
+class CfgRemoteExec {
+    class Functions {
+        mode = 2;
+        jip = 1;
+        #include "functions\INC_undercover\functionsWhitelist.hpp"
+        class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+    };
+};
