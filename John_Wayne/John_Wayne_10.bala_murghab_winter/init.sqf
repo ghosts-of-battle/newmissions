@@ -12,4 +12,3 @@ headlessClients set [(count headlessClients), player];
 publicVariable "headlessClients";
 isHC = true;
 };
-
